@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate The Roll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rate The Roll</h1>
+    <form id="ratingForm">
+      <label for="rollerName">Roller's Name:</label>
+      <input type="text" id="rollerName" required>
+
+      <label for="herbType">Brand/Type of Herb:</label>
+      <input type="text" id="herbType" required>
+
+      <label for="rollDate">Date Rolled:</label>
+      <input type="date" id="rollDate" required>
+
+      <label for="structure">Structure & Tightness (0-10):</label>
+      <input type="number" id="structure" min="0" max="10" required>
+
+      <label for="burn">Burn Consistency (0-10):</label>
+      <input type="number" id="burn" min="0" max="10" required>
+
+      <label for="airflow">Airflow & Draw (0-10):</label>
+      <input type="number" id="airflow" min="0" max="10" required>
+
+      <label for="aesthetics">Aesthetics & Presentation (0-10):</label>
+      <input type="number" id="aesthetics" min="0" max="10" required>
+
+      <label for="efficiency">Efficiency & Use of Material (0-10):</label>
+      <input type="number" id="efficiency" min="0" max="10" required>
+
+      <button type="submit">Add Rating</button>
+    </form>
+
+    <h2>Rankings</h2>
+    <button id="exportData">Export Data</button>
+    <input type="file" id="importFile" accept=".json">
+    <button id="importData">Import Data</button>
+
+    <table id="rankingsTable">
+      <thead>
+        <tr>
+          <th data-sort="name">Name</th>
+          <th data-sort="herbType">Brand/Type of Herb</th>
+          <th data-sort="date">Date</th>
+          <th data-sort="structure">Structure</th>
+          <th data-sort="burn">Burn</th>
+          <th data-sort="airflow">Airflow</th>
+          <th data-sort="aesthetics">Aesthetics</th>
+          <th data-sort="efficiency">Efficiency</th>
+          <th data-sort="totalScore">Total Score</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
