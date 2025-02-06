@@ -92,6 +92,7 @@ td button:hover {
 @media (max-width: 600px) {
   .container {
     padding: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
   }
 
   h1 {
@@ -110,33 +111,13 @@ td button:hover {
     padding: 6px;
   }
 
-  table, thead, tbody, th, td, tr {
+  table {
     display: block;
+    overflow-x: auto; /* Enable horizontal scrolling for the table */
+    white-space: nowrap; /* Prevent text wrapping */
   }
 
-  th {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  tr {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-
-  td {
-    border: none;
-    position: relative;
-    padding-left: 50%;
-  }
-
-  td:before {
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    content: attr(data-label);
+  th, td {
+    min-width: 100px; /* Ensure columns don't collapse */
   }
 }
